@@ -6,6 +6,14 @@ cc.Class({
             default: null,
             type: cc.Label
         },
+        cocosCreatorBtnLabel: {
+            default: null,
+            type: cc.Label
+        },
+        isRockBtnLabel: {
+            default: null,
+            type: cc.Label
+        },
         // defaults, set visually when attaching this script to the Canvas
         text: 'Hello, World!'
     },
@@ -19,4 +27,14 @@ cc.Class({
     update: function (dt) {
 
     },
+
+    onCocosCreatorButtonClicked: function() {
+        cc.log('CocosCreatorButtonClicked')
+        this.label.string = this.cocosCreatorBtnLabel.string
+    },
+
+    onIsRockButtonClicked: function() {
+        cc.log('IsRockButtonClicked')
+        this.label.string = this.isRockBtnLabel.string;
+    }
 });
